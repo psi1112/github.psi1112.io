@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박상익 - 개인 소개</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hot-pink': '#ff1493',
+                        'hot-pink-light': '#ff69b4',
+                        'dark-gray': '#1a1a1a',
+                        'darker-gray': '#2d2d2d'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        glow: {
+                            '0%': { textShadow: '0 0 5px #ff1493' },
+                            '100%': { textShadow: '0 0 20px #ff1493, 0 0 30px #ff1493' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-black via-dark-gray to-darker-gray text-white font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- 헤더 -->
+        <header class="text-center py-16 bg-gradient-to-r from-black to-dark-gray rounded-3xl mb-12 shadow-2xl border border-gray-800">
+            <div class="animate-float">
+                <h1 class="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-hot-pink to-hot-pink-light bg-clip-text text-transparent animate-glow">
+                    <span class="inline-block animate-heart-bounce mr-2">💖</span>
+                    박상익
+                    <span class="inline-block animate-heart-bounce ml-2" style="animation-delay:0.5s;">💖</span>
+                    <style>
+                    @keyframes heart-bounce {
+                        0%, 100% {
+                            transform: scale(1) translateY(0);
+                            /* blur 효과 제거 */
+                            filter: none;
+                        }
+                        20% {
+                            transform: scale(1.15, 0.85) translateY(-2px);
+                            filter: none;
+                        }
+                        40% {
+                            transform: scale(0.95, 1.1) translateY(-8px);
+                            filter: none;
+                        }
+                        60% {
+                            transform: scale(1.05, 0.95) translateY(-4px);
+                            filter: none;
+                        }
+                        80% {
+                            transform: scale(0.98, 1.02) translateY(-2px);
+                            filter: none;
+                        }
+                    }
+                    .animate-heart-bounce {
+                        animation: heart-bounce 1.2s cubic-bezier(.68,-0.55,.27,1.55) infinite;
+                        display: inline-block;
+                        will-change: transform;
+                    }
+                    </style>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-4 font-medium">
+                    정보통신공학 전공
+                </p>
+                <p class="text-2xl md:text-3xl text-hot-pink font-bold tracking-wide">
+                    다양한 분야를 넘나드는 개발자
+                </p>
+            </div>
+        </header>
+
+        <!-- 카드 그리드 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 mb-20">
+            <!-- 소개 카드 -->
+            <div class="lg:col-span-2 xl:col-span-3 bg-gradient-to-br from-black via-gray-900 to-darker-gray rounded-3xl p-12 shadow-2xl border-2 border-hot-pink/40 hover:border-hot-pink transition-all duration-300 hover:shadow-2xl hover:shadow-hot-pink/30 relative overflow-hidden group">
+            <!-- 빛나는 효과 -->
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-hot-pink/20 rounded-full blur-3xl opacity-40 group-hover:opacity-60 transition-all duration-500"></div>
+            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-hot-pink-light/20 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+            <div class="flex items-center mb-8">
+            <div class="w-1 h-10 bg-gradient-to-b from-hot-pink to-hot-pink-light rounded-full mr-5"></div>
+            <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-hot-pink via-hot-pink-light to-white drop-shadow-lg animate-glow">안녕하세요!</h2>
+            </div>
+            <div class="text-center space-y-6">
+            <p class="text-xl md:text-2xl text-gray-100 leading-relaxed font-medium drop-shadow">
+            <span class="inline-block px-6 py-4 bg-black/80 rounded-2xl shadow-2xl border-4 border-hot-pink/80 animate-glow text-2xl md:text-3xl font-extrabold tracking-wider text-hot-pink-light bg-clip-padding hover:scale-105 transition-transform duration-300 backdrop-blur-md">
+                안녕하세요! <span class="font-black italic underline decoration-wavy decoration-hot-pink/90 decoration-4 underline-offset-8 drop-shadow-lg text-white bg-hot-pink px-2 py-1 rounded-lg shadow-lg">핫핑크처럼 섹시한 남자 박상익</span>입니다.
+                <span class="ml-2 animate-pulse text-hot-pink-light text-3xl align-middle">💖</span>
+            </span>
+            </p>
+            <p class="text-2xl md:text-3xl font-extrabold text-hot-pink bg-gradient-to-r from-hot-pink/20 to-hot-pink-light/20 py-5 px-8 rounded-2xl border-2 border-hot-pink/40 shadow-lg tracking-wider animate-float">
+            다양한 분야를 넘나드는 개발자
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
+            새로운 기술과 아이디어로 <span class="text-hot-pink-light font-semibold">협업</span>하며 함께 성장하는 것을 좋아합니다.<br>
+            <span class="text-hot-pink font-bold">꼼꼼함</span>과 <span class="text-hot-pink-light font-bold">창의성</span>을 바탕으로 프로젝트에 기여하겠습니다!
+            </p>
+            </div>
+            </div>
+
+            <!-- 기술 스택 카드 -->
+            <div class="bg-gradient-to-br from-hot-pink/30 via-hot-pink-light/20 to-purple-700/30 rounded-2xl p-8 shadow-xl border border-hot-pink/40 hover:border-yellow-400 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-300/20 hover:-translate-y-2">
+            <div class="flex items-center mb-6">
+                <div class="w-1 h-8 bg-gradient-to-b from-hot-pink to-yellow-400 rounded-full mr-4"></div>
+                <h2 class="text-2xl font-bold text-hot-pink">기술 스택</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gradient-to-r from-hot-pink via-yellow-400 to-orange-400 text-black font-bold py-3 px-4 rounded-xl text-center shadow-lg hover:scale-105 transition-transform duration-200">
+                HTML
+                </div>
+                <div class="bg-gradient-to-r from-hot-pink-light via-purple-400 to-blue-400 text-black font-bold py-3 px-4 rounded-xl text-center shadow-lg hover:scale-105 transition-transform duration-200">
+                CSS
+                </div>
+                <div class="bg-gradient-to-r from-emerald-400 via-hot-pink-light to-pink-400 text-black font-bold py-3 px-4 rounded-xl text-center shadow-lg hover:scale-105 transition-transform duration-200">
+                Linux
+                </div>
+                <div class="bg-gradient-to-r from-purple-500 via-hot-pink to-pink-400 text-black font-bold py-3 px-4 rounded-xl text-center shadow-lg hover:scale-105 transition-transform duration-200">
+                Python
+                </div>
+            </div>
+            </div>
+
+            <!-- 프로젝트 카드 -->
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 shadow-xl border border-gray-700 hover:border-hot-pink transition-all duration-300 hover:shadow-2xl hover:shadow-hot-pink/20 hover:-translate-y-2">
+            <div class="flex items-center mb-6">
+                <div class="w-1 h-8 bg-gradient-to-b from-hot-pink to-hot-pink-light rounded-full mr-4"></div>
+                <h2 class="text-2xl font-bold text-hot-pink">프로젝트</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-gradient-to-r from-hot-pink/10 to-hot-pink-light/10 rounded-xl p-4 border border-hot-pink/30">
+                <h3 class="text-xl font-bold text-hot-pink-light mb-3 flex items-center">
+                    <span class="text-2xl mr-2">🌟</span>
+                    캡스톤 디자인
+                </h3>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    여행지와 실시간 날씨정보를 접목하여<br>
+                    사용자에게 최적의 여행지를 추천하는 서비스
+                </p>
+                <div class="inline-block bg-hot-pink text-black font-bold py-2 px-4 rounded-full text-sm">
+                    역할: 프론트엔드
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- 취미 카드 -->
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 shadow-xl border border-gray-700 hover:border-hot-pink transition-all duration-300 hover:shadow-2xl hover:shadow-hot-pink/20 hover:-translate-y-2">
+            <div class="flex items-center mb-6">
+                <div class="w-1 h-8 bg-gradient-to-b from-hot-pink to-hot-pink-light rounded-full mr-4"></div>
+                <h2 class="text-2xl font-bold text-hot-pink">취미</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-hot-pink/10 border-2 border-hot-pink text-hot-pink-light font-semibold py-4 px-6 rounded-xl text-center hover:bg-hot-pink hover:text-black transition-all duration-300 hover:scale-105">
+                🎵 음악 감상
+                </div>
+                <div class="bg-hot-pink/10 border-2 border-hot-pink text-hot-pink-light font-semibold py-4 px-6 rounded-xl text-center hover:bg-hot-pink hover:text-black transition-all duration-300 hover:scale-105">
+                🎮 게임
+                </div>
+            </div>
+            </div>
+
+            <!-- 취업 카드 -->
+            <div class="bg-gradient-to-br from-hot-pink/20 via-gray-900 to-hot-pink-light/20 rounded-2xl p-8 shadow-xl border border-hot-pink/40 hover:border-hot-pink transition-all duration-300 hover:shadow-2xl hover:shadow-hot-pink/20 hover:-translate-y-2">
+            <div class="flex items-center mb-6">
+                <div class="w-1 h-8 bg-gradient-to-b from-hot-pink to-hot-pink-light rounded-full mr-4"></div>
+                <h2 class="text-2xl font-bold text-hot-pink">취업을 위한 간절한 도전</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="relative bg-gradient-to-br from-hot-pink/30 via-white/20 to-hot-pink-light/30 border-4 border-hot-pink/70 shadow-lg py-8 px-10 rounded-2xl text-center flex flex-col items-center justify-center overflow-hidden">
+                    <!-- 상단 하트 -->
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                        <span class="text-3xl animate-bounce">💖</span>
+                        <span class="text-2xl animate-pulse">💕</span>
+                        <span class="text-3xl animate-bounce">💗</span>
+                    </div>
+                    <!-- 텍스트 -->
+                    <span class="relative z-20 inline-block px-6 py-4 bg-white/30 backdrop-blur-md rounded-xl border-2 border-hot-pink/40 shadow-hot-pink/30 shadow-lg font-semibold text-lg md:text-xl text-hot-pink-light leading-relaxed"
+                          style="box-shadow: 0 0 24px #ff69b4aa, 0 0 0 transparent;">
+                        <span class="font-bold" style="color:#b80000">
+                            <span class="align-middle text-2xl mr-2">💋</span>
+                            매일 밤을 지새우며,
+                        
+                        수많은 좌절과 불안 속에서도, <span class="font-bold text-hot-pink">간절한 마음</span>으로 포기하지 않고<br>
+                        <span class="font-extrabold text-hot-pink-light">반드시 꿈을 이루겠다는 각오</span>로 오늘도 최선을 다하고 있습니다.
+                    </span>
+                    <!-- 하단 하트 -->
+                    <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                        <span class="text-2xl animate-pulse">💞</span>
+                        <span class="text-3xl animate-bounce">💓</span>
+                        <span class="text-2xl animate-pulse">💝</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <footer class="text-center py-12 bg-gradient-to-r from-black to-dark-gray rounded-3xl border-t-4 border-hot-pink shadow-2xl">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold text-hot-pink mb-4">연락처</h3>
+                <a href="mailto:tkddlr1027@naver.com" 
+                   class="inline-block text-xl font-semibold text-hot-pink-light hover:text-white transition-colors duration-300 hover:scale-110 transform px-6 py-3 rounded-full border-2 border-hot-pink hover:bg-hot-pink hover:text-black">
+                    📧 tkddlr1027@naver.com
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 배경 효과 -->
+    <!-- 부드러운 연한 패턴: 도트, 웨이브, 라인 -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <!-- 연한 도트 패턴 -->
+        <svg class="absolute inset-0 w-full h-full opacity-10" style="mix-blend-mode: lighten;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <circle cx="20" cy="20" r="3" fill="#ff69b4" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#dots)" />
+        </svg>
+        <!-- 연한 웨이브 패턴 -->
+        <svg class="absolute top-0 left-0 w-full h-32 opacity-10" style="mix-blend-mode: lighten;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120">
+            <path fill="#ff69b4" fill-opacity="0.25" d="M0,80 Q360,0 720,80 T1440,80 V120 H0 Z"></path>
+        </svg>
+        <!-- 연한 대각선 라인 패턴 -->
+        <svg class="absolute inset-0 w-full h-full opacity-5" style="mix-blend-mode: lighten;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="diagonalLines" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="60" stroke="#ff69b4" stroke-width="2"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#diagonalLines)" />
+        </svg>
+        <!-- 하트가 날아다니는 효과 -->
+        <div id="flying-hearts" class="absolute inset-0 w-full h-full pointer-events-none"></div>
+        <style>
+            @keyframes heart-float-1 {
+                0% { transform: translateY(0) scale(1) rotate(-10deg); opacity: 0.7;}
+                50% { transform: translateY(-60px) scale(1.2) rotate(10deg); opacity: 1;}
+                100% { transform: translateY(-120px) scale(1) rotate(-10deg); opacity: 0;}
+            }
+            @keyframes heart-float-2 {
+                0% { transform: translateY(0) scale(0.9) rotate(8deg); opacity: 0.6;}
+                50% { transform: translateY(-80px) scale(1.1) rotate(-8deg); opacity: 1;}
+                100% { transform: translateY(-160px) scale(0.9) rotate(8deg); opacity: 0;}
+            }
+            @keyframes heart-float-3 {
+                0% { transform: translateY(0) scale(1.1) rotate(0deg); opacity: 0.8;}
+                50% { transform: translateY(-50px) scale(1.3) rotate(0deg); opacity: 1;}
+                100% { transform: translateY(-100px) scale(1.1) rotate(0deg); opacity: 0;}
+            }
+            .heart-anim-1 { animation: heart-float-1 4s linear infinite; }
+            .heart-anim-2 { animation: heart-float-2 5s linear infinite; }
+            .heart-anim-3 { animation: heart-float-3 6s linear infinite; }
+            .flying-heart {
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                opacity: 0.8;
+                pointer-events: none;
+                z-index: 1;
+            }
+        </style>
+        <script>
+            // 하트 SVG 문자열
+            const heartSVG = color => `
+                <svg viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5 2C21.0147 2 18.7617 3.30375 17.5 5.2725C16.2383 3.30375 13.9853 2 11.5 2C7.3575 2 4 5.3575 4 9.5C4 17.5 16 27 16 27C16 27 28 17.5 28 9.5C28 5.3575 24.6425 2 20.5 2H23.5Z" fill="${color}" stroke="#fff" stroke-width="1.2"/>
+                </svg>
+            `;
+            // 랜덤 하트 생성
+            function createHeart(left, delay, anim, color) {
+                const div = document.createElement('div');
+                div.className = `flying-heart ${anim}`;
+                div.style.left = left + '%';
+                div.style.bottom = Math.random() * 30 + 5 + '%';
+                div.style.animationDelay = delay + 's';
+                div.innerHTML = heartSVG(color);
+                return div;
+            }
+            // 하트 여러 개 배치
+            const colors = ['#ff69b4', '#ff1493', '#fff0f6', '#ffb6c1'];
+            const anims = ['heart-anim-1', 'heart-anim-2', 'heart-anim-3'];
+            const heartContainer = document.getElementById('flying-hearts');
+            for(let i=0; i<12; i++) {
+                const left = Math.random() * 90 + 2;
+                const delay = Math.random() * 4;
+                const anim = anims[Math.floor(Math.random()*anims.length)];
+                const color = colors[Math.floor(Math.random()*colors.length)];
+                heartContainer.appendChild(createHeart(left, delay, anim, color));
+            }
+        </script>
+    </div>
+</body>
+</html>

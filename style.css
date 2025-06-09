@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 헤더 */
+.header {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(255, 20, 147, 0.1);
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header .subtitle {
+    font-size: 1.5rem;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.header .description {
+    font-size: 1.8rem;
+    color: #ff1493;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
+}
+
+/* 카드 컨테이너 */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* 카드 스타일 */
+.card {
+    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 20, 147, 0.2);
+}
+
+.card:hover::before {
+    opacity: 0.1;
+}
+
+.card h2 {
+    color: #ff1493;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card h2::before {
+    content: '▶';
+    color: #ff1493;
+    font-size: 1.2rem;
+}
+
+/* 소개 카드 */
+.intro-card {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: linear-gradient(145deg, #000000, #1a1a1a);
+}
+
+.intro-card p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+/* 기술 스택 */
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tech-item {
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    color: #000000;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: scale(1.1);
+}
+
+/* 프로젝트 카드 */
+.project-info {
+    margin-bottom: 15px;
+}
+
+.project-title {
+    color: #ff69b4;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    color: #cccccc;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.project-role {
+    color: #ff1493;
+    font-weight: bold;
+    background: rgba(255, 20, 147, 0.1);
+    padding: 8px 15px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+/* 취미 */
+.hobby-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hobby-item {
+    background: rgba(255, 20, 147, 0.1);
+    border: 2px solid #ff1493;
+    color: #ff69b4;
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hobby-item:hover {
+    background: #ff1493;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+/* 푸터 */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 2px solid #ff1493;
+    margin-top: 60px;
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    border-radius: 20px;
+}
+
+.footer h3 {
+    color: #ff1493;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.footer a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff1493;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header .description {
+        font-size: 1.4rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .tech-list, .hobby-list {
+        justify-content: center;
+    }
+}
